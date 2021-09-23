@@ -10,12 +10,17 @@ import { Orderstypes } from 'src/app/interfaces/orderstypes';
 export class CustomersComponent implements OnInit {
 
   customerData:Orderstypes[] = [];
+  isLoading:boolean = true;
 
 
   constructor() { }
 
   ngOnInit(): void {
     this.customerData = customerData;
+
+    setTimeout(() => {
+      this.isLoading = false;
+     }, 1000);
 
   }
 

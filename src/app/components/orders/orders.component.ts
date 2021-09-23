@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrdersComponent implements OnInit {
 
+  isLoading:boolean = true;
+
   constructor() { }
 
-  ngOnInit(): void {
+ ngOnInit(): void {
+
+    setTimeout(() => {
+      this.isLoading = false;
+     }, 400);
+     
   }
 
 }

@@ -13,6 +13,8 @@ export class CompenstaionComponent implements OnInit {
   delegateData:Orderstypes[] = [];
   restaurantData:Orderstypes[] = [];
 
+  isLoading:boolean = true;
+
 
   constructor() { }
 
@@ -21,6 +23,10 @@ export class CompenstaionComponent implements OnInit {
     this.delegateData = delegateData;
     this.restaurantData = restaurantData;
 
+    setTimeout(() => {
+      this.isLoading = false;
+     }, 1000);
+     
   }
 
 }

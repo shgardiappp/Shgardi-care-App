@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&display=swap");
 
-
+@import '~animate.css/animate.min';
 
 $bgColor: #fff;
 $accentColor:#faaf3b;
@@ -10,6 +10,7 @@ $fontColor:#000;
 $errorColor: #d50000;
 $welcomeColor:#00c853;
 $whiteColor:#fff;
+$navLinkColor:#212121;
 
 body {
     background-color: $bgColor;

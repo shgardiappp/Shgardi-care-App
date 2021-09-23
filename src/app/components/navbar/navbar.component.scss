@@ -1,6 +1,7 @@
 @import '../../../styles.scss';
 
 
+
 .navbar-brand{
     display: flex;
     align-items: center;
@@ -15,18 +16,33 @@
     width: 100%;
 }
 
-.auth-links {
-    display: flex;
-    list-style: none;
-    margin-left: auto;
-    margin-bottom: 0 !important;
+
+
+.nav-link{
+    color: $navLinkColor !important;
+    transition: all 0.3s ease-in-out;
+
+    &:hover{
+        color: $accentColor !important;
+        font-weight: bold;
+    transform: scale(1.1);
+    }
 }
+
 
 .active-link{
     color: $accentColor !important;
     font-weight: bold;
 }
 
+
+
+.auth-links {
+    display: flex;
+    list-style: none;
+    margin-left: auto;
+    margin-bottom: 0 !important;
+}
 
 @media screen and (max-width: 992px) {
 
