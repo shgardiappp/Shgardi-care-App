@@ -39,7 +39,7 @@ export class FooddataviewComponent implements OnInit {
       break;
       case 'courier':
         this.courierOnlineData = courierOnline; 
-        this.courierOfflineData = courierOnline; 
+        this.courierOfflineData = courierOffline; 
         this.foodType = 'courier';
         break;
     }

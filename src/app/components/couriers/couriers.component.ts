@@ -1,4 +1,4 @@
-import { courierData } from './../../api/ordersApi';
+import { courierData } from './../../api/couriersAPI';
 import { Component, OnInit } from '@angular/core';
 import { Orderstypes } from 'src/app/interfaces/orderstypes';
 
