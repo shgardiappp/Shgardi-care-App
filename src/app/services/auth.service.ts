@@ -12,11 +12,14 @@ export class AuthService {
 
 
 
-  currentUser = new BehaviorSubject(null);
+  currentUser:any = new BehaviorSubject(null);
 
   constructor(private _HttpClient: HttpClient , private _Router:Router) { 
     if(localStorage.getItem('currentUserToken') != null)
-      this.saveCurrentUser();
+      {
+        this.saveCurrentUser();
+      }
+   
 
   }
 
@@ -25,8 +28,6 @@ export class AuthService {
   saveCurrentUser() {
     let token: any = localStorage.getItem('currentUserToken');
     this.currentUser.next(jwtDecode(token));
-    console.log(this.currentUser);
-
   }
 
 

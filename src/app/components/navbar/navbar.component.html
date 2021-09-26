@@ -1,51 +1,77 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light p-2">
     <div class="container-fluid">
-        <a class="navbar-brand" routerLink="/food">
+        <a class="navbar-brand" routerLink="/home">
             <img src="assets/logo.png" alt="nav-logo">
             <span>Shagrdi Care</span>
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul *ngIf='loginState' class="navbar-nav mr-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link" (click)="closeNavbar()" routerLink="/food" routerLinkActive="active-link">Food</a>
-                </li>
-              
-                <li class="nav-item">
-                    <a class="nav-link" (click)="closeNavbar()" routerLink="/orders" routerLinkActive="active-link">Other Orders</a>
-                </li>
-
-            
 
                 <li class="nav-item">
-                    <a class="nav-link" (click)="closeNavbar()" routerLink="/compenstaion" routerLinkActive="active-link">Compenstaion</a>
+                    <a class="nav-link" (click)="closeNavbar()" routerLink="/home"
+                        routerLinkActive="active-link">Home</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" (click)="closeNavbar()" routerLink="/couriers" routerLinkActive="active-link">Couriers</a>
+                    <a class="nav-link" (click)="closeNavbar()" routerLink="/food"
+                        routerLinkActive="active-link">Food</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" (click)="closeNavbar()" routerLink="/customers" routerLinkActive="active-link">Customers</a>
+                    <a class="nav-link" (click)="closeNavbar()" routerLink="/orders"
+                        routerLinkActive="active-link">Other Orders</a>
+                </li>
+
+
+
+                <li class="nav-item">
+                    <a class="nav-link" (click)="closeNavbar()" routerLink="/compenstaion"
+                        routerLinkActive="active-link">Compenstaion</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" (click)="closeNavbar()" routerLink="/couriers"
+                        routerLinkActive="active-link">Couriers</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" (click)="closeNavbar()" routerLink="/customers"
+                        routerLinkActive="active-link">Customers</a>
                 </li>
             </ul>
 
+
+        
+
             <ul class="auth-links">
 
-                <li *ngIf='!loginState' class="nav-item">
-                    <a class="nav-link" (click)="closeNavbar()" routerLink="login" routerLinkActive="active-link">Login</a>
-                </li>
+                <li class="nav-item dropdown">
+                    <a class="btn dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+                        {{ currentUsername }}
+                    </a>
+                    
+                    <ul class="dropdown-menu">
 
-                <li *ngIf='!loginState' class="nav-item">
-                    <a class="nav-link" (click)="closeNavbar()" routerLink="register" routerLinkActive="active-link">Register</a>
-                </li>
-
-                <li *ngIf='loginState' class="nav-item">
-                    <a class="nav-link" (click)="logout()">Logout</a>
-                </li>
-
+                        <li *ngIf='!loginState' class="nav-item">
+                            <a class="dropdown-item" (click)="closeNavbar()" routerLink="login"
+                                routerLinkActive="active-link">Login</a>
+                        </li>
+        
+                        <li *ngIf='!loginState' class="nav-item">
+                            <a class="dropdown-item" (click)="closeNavbar()" routerLink="register"
+                                routerLinkActive="active-link">Register</a>
+                        </li>
+        
+                        <li *ngIf='loginState' class="nav-item">
+                            <a class="dropdown-item" (click)="logout()">Logout</a>
+                        </li>
+        
+                    </ul>
+                  </li>
 
             </ul>
 

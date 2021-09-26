@@ -12,7 +12,7 @@ declare let $: any;
 export class LoginComponent implements OnInit {
 
   errorMessage: string = '';
-  isLoading: boolean = false;
+  isLoading: boolean = true;
 
 
   constructor(private _AuthService: AuthService, private _Router: Router) { }
@@ -21,8 +21,12 @@ export class LoginComponent implements OnInit {
     $('.error-message-container').hide();
 
     if (this._AuthService.isLoggedIn()) {
-      this._Router.navigate(['/food']);
+      this._Router.navigate(['/home']);
     }
+
+    setTimeout(() => {
+      this.isLoading = false;
+     }, 800);
   }
 
 
@@ -43,7 +47,7 @@ export class LoginComponent implements OnInit {
         this.isLoading = false;
         localStorage.setItem('currentUserToken', response.token);
         this._AuthService.saveCurrentUser();
-        this._Router.navigate(['/food']);
+        this._Router.navigate(['/home']);
       }
       else {
         this.isLoading = false;

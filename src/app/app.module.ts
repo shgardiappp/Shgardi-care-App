@@ -18,6 +18,7 @@ import { OrdersdataviewComponent } from './components/ordersdataview/ordersdatav
 import { CouriersComponent } from './components/couriers/couriers.component';
 import { CustomersComponent } from './components/customers/customers.component';
 import { LoadingspinnerComponent } from './components/loadingspinner/loadingspinner.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { LoadingspinnerComponent } from './components/loadingspinner/loadingspin
     CouriersComponent,
     CustomersComponent,
     LoadingspinnerComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

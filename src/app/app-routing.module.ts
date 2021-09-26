@@ -1,3 +1,4 @@
+import { HomeComponent } from './components/home/home.component';
 import { CouriersComponent } from './components/couriers/couriers.component';
 import { CustomersComponent } from './components/customers/customers.component';
 import { OrdersdataviewComponent } from './components/ordersdataview/ordersdataview.component';
@@ -13,7 +14,8 @@ import { RegisterComponent } from './components/register/register.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
 
 const routes: Routes = [
-  {path:'' , redirectTo:'food' , pathMatch:'full'},
+  {path:'' , redirectTo:'home' , pathMatch:'full'},
+  {path:'home' , canActivate:[AuthGuard] , component:HomeComponent},
   {path:'food' , canActivate:[AuthGuard] , component:FoodComponent},
   {path:'orders' , canActivate:[AuthGuard] , component:OrdersComponent},
   {path:'compenstaion' , canActivate:[AuthGuard] , component:CompenstaionComponent},
