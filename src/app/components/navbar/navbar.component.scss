@@ -22,10 +22,13 @@
     color: $navLinkColor !important;
     transition: all 0.3s ease-in-out;
 
+    span{
+        margin: 0 5px;
+    }
+
     &:hover{
         color: $accentColor !important;
         font-weight: bold;
-    transform: scale(1.1);
     }
 }
 

@@ -19,6 +19,7 @@ import { CouriersComponent } from './components/couriers/couriers.component';
 import { CustomersComponent } from './components/customers/customers.component';
 import { LoadingspinnerComponent } from './components/loadingspinner/loadingspinner.component';
 import { HomeComponent } from './components/home/home.component';
+import { CallsComponent } from './components/calls/calls.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { HomeComponent } from './components/home/home.component';
     CustomersComponent,
     LoadingspinnerComponent,
     HomeComponent,
+    CallsComponent,
   ],
   imports: [
     BrowserModule,
