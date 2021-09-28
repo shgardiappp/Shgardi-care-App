@@ -77,3 +77,21 @@ a:hover {
 input.ng-dirty.ng-invalid {
     border: 2px solid #f00;
 }
+
+table{
+    thead{
+        background-color: $accentColor;
+        color: $whiteColor;
+
+        th:first-child{
+               padding-left: 2.5rem;
+        }
+    }
+
+    th, td {
+        padding: 1rem 0.8rem;
+    }
+
+    
+   
+}
