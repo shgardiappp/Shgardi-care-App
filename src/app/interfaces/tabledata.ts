@@ -1,6 +1,7 @@
 export interface Tabledata {
 
     case:string,
-    actions:string[]
+    situation:string[]
+    actions:string[][]
 
 }

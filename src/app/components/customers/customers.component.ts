@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { customerData } from 'src/app/api/customerAPI';
+import { customerData,cancelData } from 'src/app/api/customerAPI';
 import { Orderstypes } from 'src/app/interfaces/orderstypes';
 
 @Component({
@@ -10,6 +10,7 @@ import { Orderstypes } from 'src/app/interfaces/orderstypes';
 export class CustomersComponent implements OnInit {
 
   customerData:Orderstypes[] = [];
+  cancelData:Orderstypes[]=[];
   isLoading:boolean = true;
 
 
@@ -17,6 +18,7 @@ export class CustomersComponent implements OnInit {
 
   ngOnInit(): void {
     this.customerData = customerData;
+    this.cancelData=cancelData;
 
     setTimeout(() => {
       this.isLoading = false;

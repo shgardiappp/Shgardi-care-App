@@ -16,7 +16,7 @@ export class FooddataviewComponent implements OnInit {
 
   allTableData:Tabledata[] = [];
 
-  cancelledOnlineData:Multitabledata[] = [];
+  cancelledOnlineData:Tabledata[] = [];
   cancelledOfflineData:Multitabledata[] = [];
 
   courierOnlineData:Tabledata[] = [];
@@ -33,13 +33,11 @@ export class FooddataviewComponent implements OnInit {
       
       case 'cancelled': 
       this.cancelledOnlineData = cancelledOnline; 
-      this.cancelledOfflineData = cancelledOffline; 
       this.foodType = 'cancelled';
      
       break;
       case 'courier':
         this.courierOnlineData = courierOnline; 
-        this.courierOfflineData = courierOffline; 
         this.foodType = 'courier';
         break;
     }

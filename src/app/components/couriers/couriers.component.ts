@@ -1,6 +1,8 @@
-import { courierData } from './../../api/couriersAPI';
+import { courierData,generalData,compensationData } from './../../api/couriersAPI';
 import { Component, OnInit } from '@angular/core';
 import { Orderstypes } from 'src/app/interfaces/orderstypes';
+import { Tabledata } from 'src/app/interfaces/tabledata';
+
 
 @Component({
   selector: 'app-couriers',
@@ -9,19 +11,22 @@ import { Orderstypes } from 'src/app/interfaces/orderstypes';
 })
 export class CouriersComponent implements OnInit {
 
-  courierData:Orderstypes[] = [];
-  isLoading:boolean = true;
+  courierData: Orderstypes[] = [];
+  generalData: Tabledata[] = [];
+  compensationData:Tabledata[]=[];
+  isLoading: boolean = true;
 
 
   constructor() { }
 
   ngOnInit(): void {
     this.courierData = courierData;
-
+    this.generalData = generalData;
+    this.compensationData=compensationData;
     setTimeout(() => {
       this.isLoading = false;
-     }, 1000);
-     
+    }, 1000);
+
   }
 
 }

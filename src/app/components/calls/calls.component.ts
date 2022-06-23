@@ -1,7 +1,7 @@
-import { SaudiWordsData } from './../../interfaces/saudi-words-data';
+import { Tabledata } from './../../interfaces/tabledata';
 import { CallsData } from './../../interfaces/calls-data';
 import { Component, OnInit } from '@angular/core';
-import { callsTableData , angryCustomerNotes, callsNotes, saudiAngruCustomerWords, saudiWordsTableData } from 'src/app/api/callsAPI';
+import { generalData  } from 'src/app/api/callsAPI';
 
 @Component({
   selector: 'app-calls',
@@ -10,21 +10,13 @@ import { callsTableData , angryCustomerNotes, callsNotes, saudiAngruCustomerWord
 })
 export class CallsComponent implements OnInit {
 
-  callTableData:CallsData[] = [];
-  callsNotesList:string[] = [];
-  angryCustomerNotes:string[]=[];
-  saudiAngruCustomerWords:string[]=[];
-  saudiWordsTableData:SaudiWordsData[] = [];
+  generalData:Tabledata[] = [];
+  
 
   constructor() { }
 
   ngOnInit(): void {
-    this.callTableData = callsTableData;
-    this.callsNotesList = callsNotes;
-    this.angryCustomerNotes = angryCustomerNotes;
-    this.saudiAngruCustomerWords = saudiAngruCustomerWords;
-    this.saudiWordsTableData = saudiWordsTableData;
-
+    this.generalData = generalData;
   }
 
 }

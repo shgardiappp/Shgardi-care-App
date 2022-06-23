@@ -1,7 +1,7 @@
-import { Orderstypes } from './../../interfaces/orderstypes';
+import { Tabledata } from './../../interfaces/tabledata';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { cashData , cancelledData , completedData , courierData} from 'src/app/api/ordersApi';
+import { cashData, cancelledData, completedData, courierData } from 'src/app/api/ordersApi';
 
 @Component({
   selector: 'app-ordersdataview',
@@ -10,12 +10,11 @@ import { cashData , cancelledData , completedData , courierData} from 'src/app/a
 })
 export class OrdersdataviewComponent implements OnInit {
 
-  orderType:string = '';
+  orderType: string = '';
 
-  cashData:Orderstypes[] = [];
-  cancelledData:Orderstypes[] = [];
-  completedData:Orderstypes[] = [];
-  courierData:Orderstypes[] = [];
+  cashData: Tabledata[] = [];
+  cancelledData: Tabledata[] = [];
+  completedData: Tabledata[] = [];
 
 
   constructor(private route: ActivatedRoute) { }
@@ -23,11 +22,10 @@ export class OrdersdataviewComponent implements OnInit {
   ngOnInit(): void {
     const type = this.route.snapshot.paramMap.get('type');
 
-    switch(type){
-      case 'cash' : this.cashData = cashData; this.orderType = 'cash'; break;
-      case 'cancelled' : this.cancelledData = cancelledData; this.orderType = 'cancelled'; break;
+    switch (type) {
+      case 'cash': this.cashData = cashData; this.orderType = 'cash'; break;
+      case 'cancelled': this.cancelledData = cancelledData; this.orderType = 'cancelled'; break;
       case 'completed': this.completedData = completedData; this.orderType = 'completed'; break;
-      case 'courier': this.courierData = courierData; this.orderType = 'courier'; break;
 
     }
   }
